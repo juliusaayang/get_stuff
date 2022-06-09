@@ -101,11 +101,13 @@ class _DictionaryPageState extends State<DictionaryPage> {
                     return const SizedBox();
                   },
                   dictionary: (dictionary) {
-                    return SingleChildScrollView(
-                      child: ContentHolder(
-                        text: dictionary.definition!,
-                      ),
-                    );
+                    return (dictionary.definition == "")
+                        ? const SizedBox()
+                        : SingleChildScrollView(
+                            child: ContentHolder(
+                              text: dictionary.definition!,
+                            ),
+                          );
                   },
                 );
               },
