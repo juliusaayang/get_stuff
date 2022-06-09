@@ -24,7 +24,7 @@ class BucketlistPage extends StatefulWidget {
 class _BucketlistPageState extends State<BucketlistPage> {
   @override
   void initState() {
-    BlocProvider.of<GetStuffsCubit>(context).getBucketlist();
+    sl<GetStuffsCubit>().getBucketlist();
     super.initState();
   }
 

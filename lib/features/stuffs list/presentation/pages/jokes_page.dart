@@ -25,7 +25,7 @@ class _JokesPageState extends State<JokesPage> {
 
   @override
   void initState() {
-    BlocProvider.of<GetStuffsCubit>(context).getJokes(1);
+    sl<GetStuffsCubit>().getJokes(3);
     super.initState();
   }
 
