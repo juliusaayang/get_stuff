@@ -22,6 +22,13 @@ class DictionaryPage extends StatefulWidget {
 
 class _DictionaryPageState extends State<DictionaryPage> {
   final TextEditingController _dictionaryController = TextEditingController();
+
+  @override
+  void dispose() {
+    _dictionaryController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return PopupWidget(

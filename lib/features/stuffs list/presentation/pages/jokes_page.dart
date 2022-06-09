@@ -30,6 +30,12 @@ class _JokesPageState extends State<JokesPage> {
   }
 
   @override
+  void dispose() {
+    _jokesController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return PopupWidget(
       child: SafeArea(
